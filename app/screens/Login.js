@@ -49,7 +49,7 @@ function Login({ navigation }) {
                 setError(null);
                 login(email, password);
                 console.log(email, password);
-                navigation.navigate("Test");
+                navigation.navigate("Dashboard");
               } catch (e) {
                 setError("Error");
               }

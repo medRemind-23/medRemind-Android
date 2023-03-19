@@ -39,7 +39,7 @@ export default function History() {
         const docRef = doc(Firedb, "Patient", x.user_id);
         getDoc(docRef).then((res) => {
           //console.log(res.data().pres);
-          setUserEntry(res.data().pres);
+          setUserEntry(res.data().medicalinfo);
         });
       });
     } catch (e) {

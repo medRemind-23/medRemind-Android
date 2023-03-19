@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "125022898851",
+    "project_id": "medremind-23",
+    "storage_bucket": "medremind-23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125022898851:android:589f3b1f9034d8f82ecd16",
+        "android_client_info": {
+          "package_name": "com.cyrilc1002.medRemind"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125022898851-m91422b3g8k0lk04lpi3tik9d07apthk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuIzgDEOxBbIlMiuAniTy4n17pUCgHwbE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125022898851-m91422b3g8k0lk04lpi3tik9d07apthk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
