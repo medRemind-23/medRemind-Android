@@ -4,6 +4,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import CustomDrawer from "./CustomDrawer";
 import Login from "../../screens/Login";
 import Test from "../../screens/Test";
+import Entry from "../../screens/Entry";
 
 const Drawer = createDrawerNavigator();
 
@@ -25,11 +26,7 @@ const Appstack = () => {
       }}
     >
       <Drawer.Screen name="Test" component={Test} />
-      {/* <Drawer.Screen name="Participants Entry" component={Participation} />
-      <Drawer.Screen name="Winners Entry" component={PrizeEntry} />
-      <Drawer.Screen name="My Entries" component={MyEntries} />
-      <Drawer.Screen name="Winners" component={Winners} />
-      <Drawer.Screen name="Contact" component={Contact} /> */}
+      <Drawer.Screen name="Entry" component={Entry} />
     </Drawer.Navigator>
   );
 };
