@@ -5,6 +5,7 @@ import CustomDrawer from "./CustomDrawer";
 import Login from "../../screens/Login";
 import Test from "../../screens/Test";
 import Entry from "../../screens/Entry";
+import History from "../../screens/History";
 
 const Drawer = createDrawerNavigator();
 
@@ -27,6 +28,7 @@ const Appstack = () => {
     >
       <Drawer.Screen name="Test" component={Test} />
       <Drawer.Screen name="Entry" component={Entry} />
+      <Drawer.Screen name="History" component={History} />
     </Drawer.Navigator>
   );
 };

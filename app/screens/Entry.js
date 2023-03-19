@@ -11,9 +11,11 @@ import React, { useContext, useState } from "react";
 import { Dropdown } from "react-native-element-dropdown";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import { AuthContext } from "../Nav/AuthProvider";
+import PostData from "../DB/PostData";
 
 const Entry = () => {
-  const { login, error } = useContext(AuthContext);
+  const { login, error, Firedb, getUserData } = useContext(AuthContext);
+  const [userData, setUserData] = useState(null);
   const [medicine, setMedicine] = useState(null);
   const [duration, setDuration] = useState(null);
   const [time, setTime] = useState(null);
@@ -88,7 +90,8 @@ const Entry = () => {
       <TouchableOpacity
         onPress={() => {
           try {
-            post(medicine, duration, time);
+            getUserData().then((res) => setUserData(res.user_id));
+            PostData(userData, Firedb, medicine, duration, time);
             setMedicine(null);
             setDuration(null);
             setTime(null);

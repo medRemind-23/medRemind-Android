@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 import jwt_decode from "jwt-decode";
 
 export const AuthContext = createContext();
@@ -19,6 +20,7 @@ function AuthProvider({ children }) {
 
   // Initialize Firebase
   const fireBaseApp = initializeApp(firebaseConfig);
+  const Firedb = getFirestore(fireBaseApp);
 
   const [userToken, setUserToken] = useState(null);
   const [error, setError] = useState(null);
@@ -82,6 +84,7 @@ function AuthProvider({ children }) {
         loading,
         fireBaseApp,
         getUserData,
+        Firedb,
       }}
     >
       {children}
